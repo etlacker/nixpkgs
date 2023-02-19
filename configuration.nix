@@ -1,6 +1,11 @@
 { pkgs, lib, ... }:
 
 {
+  users.users.jacobranson = {
+    name = "jacobranson";
+    home = "/Users/jacobranson";
+  };
+
   nix.settings.substituters = [
     "https://cache.nixos.org/"
   ];
