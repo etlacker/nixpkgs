@@ -42,7 +42,9 @@
   ];
 
   homebrew.enable = true;
+  homebrew.autoUpdate = true;
   homebrew.casks = [
+    "kitty"
     "orion"
     "obsidian"
     "visual-studio-code"
