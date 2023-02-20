@@ -25,7 +25,7 @@
     enable = true;
 
     settings = {
-      shell = "${config.home.homeDirectory}/.nix-profile/bin/tmux new-session -ADs main";
+      shell = "/etc/profiles/per-user/jacobranson/bin/tmux new-session -ADs main";
       confirm_os_window_close = 0;
     };
 
@@ -36,7 +36,7 @@
   programs.tmux = {
     enable = true;
 
-    shell = "${config.home.homeDirectory}/.nix-profile/bin/zsh";
+    shell = "/etc/profiles/per-user/jacobranson/bin/zsh";
 
     plugins = with pkgs.tmuxPlugins; [
       onedark-theme
