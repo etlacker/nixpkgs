@@ -59,10 +59,6 @@
     "notunes"
   ];
 
-  networking.computerName = "Jacob's MacBook Air";
-  networking.hostName = "Jacobs-MacBook-Air";
-  networking.localHostName = "Jacobs-MacBook-Air.local";
-
   system.defaults.finder.AppleShowAllExtensions = true;
   system.defaults.finder.AppleShowAllFiles = true;
   system.defaults.finder.FXDefaultSearchScope = "SCcf";
