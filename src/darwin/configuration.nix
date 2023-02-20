@@ -86,8 +86,4 @@
   services.skhd.enable = true;
   services.skhd.package = pkgs.skhd;
   services.skhd.skhdConfig = (builtins.readFile ./assets/skhd/skhdrc);
-
-  services.spacebar.enable = true;
-  services.spacebar.package = pkgs.spacebar;
-  services.spacebar.extraConfig = (builtins.readFile ./assets/spacebar/spacebarrc);
 }
