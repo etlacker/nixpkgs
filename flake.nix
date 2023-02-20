@@ -13,12 +13,12 @@
     darwinConfigurations."Jacobs-MacBook-Air" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./configuration.nix
+        ./src/darwin/configuration.nix
         home-manager.darwinModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.jacobranson = import ./home.nix;
+            users.jacobranson = import ./src/home.nix;
           };
         }
       ];
