@@ -32,56 +32,56 @@ lalt + cmd - right : \
     yabai -m window --resize right:50:0 || \
     yabai -m window --resize left:50:0
 
-# --- Spaces ---
+# # --- Spaces ---
 
-## Create a new space (ctrl + enter)
-lctrl - 0x24 : \
-    yabai -m space --create && \
-    index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
-    yabai -m space --focus "${index}"
+# ## Create a new space (ctrl + enter)
+# lctrl - 0x24 : \
+#     yabai -m space --create && \
+#     index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+#     yabai -m space --focus "${index}"
 
-## Destroy the current space (ctrl + delete)
-lctrl - 0x33 : yabai -m space --destroy
+# ## Destroy the current space (ctrl + delete)
+# lctrl - 0x33 : yabai -m space --destroy
 
-## Change the focused space
-lctrl - left : if [[ \
-        $(yabai -m query --spaces --space | jq '.index' ) != \
-        $(yabai -m query --displays --display | jq '.spaces[0]') \
-    ]]; then \
-            yabai -m space --focus prev; \
-        else \
-            yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[-1]'); \
-        fi
-lctrl - right : if [[ \
-        $(yabai -m query --spaces --space | jq '.index' ) != \
-        $(yabai -m query --displays --display | jq '.spaces[-1]') \
-    ]]; then \
-            yabai -m space --focus next; \
-        else \
-            yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[0]'); \
-        fi
+# ## Change the focused space
+# lctrl - left : if [[ \
+#         $(yabai -m query --spaces --space | jq '.index' ) != \
+#         $(yabai -m query --displays --display | jq '.spaces[0]') \
+#     ]]; then \
+#             yabai -m space --focus prev; \
+#         else \
+#             yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[-1]'); \
+#         fi
+# lctrl - right : if [[ \
+#         $(yabai -m query --spaces --space | jq '.index' ) != \
+#         $(yabai -m query --displays --display | jq '.spaces[-1]') \
+#     ]]; then \
+#             yabai -m space --focus next; \
+#         else \
+#             yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[0]'); \
+#         fi
 
-## Move a window between spaces
-lshift + lctrl - left : if [[ \
-        $(yabai -m query --spaces --space | jq '.index' ) != \
-        $(yabai -m query --displays --display | jq '.spaces[0]') \
-    ]]; then \
-            yabai -m window --space prev && \
-            yabai -m space --focus prev; \
-        else \
-            yabai -m window --space $(yabai -m query --displays --display | jq '.spaces[-1]') && \
-            yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[-1]'); \
-        fi
-lshift + lctrl - right : if [[ \
-        $(yabai -m query --spaces --space | jq '.index' ) != \
-        $(yabai -m query --displays --display | jq '.spaces[-1]') \
-    ]]; then \
-            yabai -m window --space next && \
-            yabai -m space --focus next; \
-        else \
-            yabai -m window --space $(yabai -m query --displays --display | jq '.spaces[0]') && \
-            yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[0]'); \
-        fi
+# ## Move a window between spaces
+# lshift + lctrl - left : if [[ \
+#         $(yabai -m query --spaces --space | jq '.index' ) != \
+#         $(yabai -m query --displays --display | jq '.spaces[0]') \
+#     ]]; then \
+#             yabai -m window --space prev && \
+#             yabai -m space --focus prev; \
+#         else \
+#             yabai -m window --space $(yabai -m query --displays --display | jq '.spaces[-1]') && \
+#             yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[-1]'); \
+#         fi
+# lshift + lctrl - right : if [[ \
+#         $(yabai -m query --spaces --space | jq '.index' ) != \
+#         $(yabai -m query --displays --display | jq '.spaces[-1]') \
+#     ]]; then \
+#             yabai -m window --space next && \
+#             yabai -m space --focus next; \
+#         else \
+#             yabai -m window --space $(yabai -m query --displays --display | jq '.spaces[0]') && \
+#             yabai -m space --focus $(yabai -m query --displays --display | jq '.spaces[0]'); \
+#         fi
 
 # --- Displays ---
 
