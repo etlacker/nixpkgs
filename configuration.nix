@@ -39,7 +39,19 @@
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
-   ];
+  ];
+
+  homebrew.enable = true;
+  homebrew.casks = [
+    "orion"
+    "obsidian"
+    "visual-studio-code"
+    "utm"
+    "bartender"
+    "keepingyouawake"
+    "scroll-reverser"
+    "notunes"
+  ];
 
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToControl = true;
