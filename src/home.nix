@@ -77,6 +77,7 @@
     dotDir = ".config/zsh";
 
     initExtra = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
       bindkey '^[[A' history-substring-search-up
       bindkey '^[[B' history-substring-search-down
       bindkey -M vicmd 'k' history-substring-search-up
