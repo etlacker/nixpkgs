@@ -54,6 +54,7 @@
     "kitty"
     "orion"
     "bitwarden"
+    "element"
     "obsidian"
     "visual-studio-code"
     "utm"
