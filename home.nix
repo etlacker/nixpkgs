@@ -27,8 +27,25 @@
     enable = true;
 
     settings = {
-      shell = "/etc/profiles/per-user/jacobranson/bin/tmux new-session -ADs main";
+      shell = "/etc/profiles/per-user/jacobranson/bin/zsh";
+
       confirm_os_window_close = 0;
+      placement_strategy = "center";
+      remember_window_size = "no";
+      initial_window_width = "120c";
+      initial_window_height = "40c";
+      #hide_window_decorations = "titlebar-only";
+      macos_titlebar_color = "background";
+      wayland_titlebar_color = "background";
+      macos_show_window_title_in = "none";
+
+      tab_bar_style = "powerline";
+
+      font_family = "CaskaydiaCove Nerd Font Mono";
+      bold_font = "CaskaydiaCove Nerd Font Mono Bold";
+      itlaic_font = "CaskaydiaCove Nerd Font Mono Italic";
+      bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
+      font_size = "14.0";
     };
 
     theme = "One Dark";
@@ -46,7 +63,6 @@
     ];
 
     extraConfig = ''
-      set -g default-terminal "screen-256color"
       set -g mouse on
       set-option -g set-clipboard on
     '';
@@ -80,9 +96,9 @@
 
     shellAliases = {
       switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
+      fonts = "kitty +list-fonts | less";
       less = "moar";
       cat = "bat";
-      fonts = "fc-list";
       gs = "git status";
     };
 
@@ -176,6 +192,7 @@
     ripgrep
     moar
     neofetch
+    fontconfig
   ];
 }
 
