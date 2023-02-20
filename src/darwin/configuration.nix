@@ -47,6 +47,9 @@
   homebrew.enable = true;
   homebrew.onActivation.autoUpdate = true;
   homebrew.onActivation.upgrade = true;
+  homebrew.taps = [
+    "homebrew/cask-drivers"
+  ];
   homebrew.casks = [
     "kitty"
     "orion"
@@ -55,7 +58,7 @@
     "utm"
     "bartender"
     "keepingyouawake"
-    "scroll-reverser"
+    "logi-options-plus"
     "notunes"
   ];
 
