@@ -53,6 +53,7 @@
   homebrew.casks = [
     "kitty"
     "orion"
+    "bitwarden"
     "obsidian"
     "visual-studio-code"
     "utm"
