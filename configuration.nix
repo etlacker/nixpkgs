@@ -1,10 +1,12 @@
 { pkgs, lib, ... }:
 
 {
-  users.users.jacobranson = {
-    name = "jacobranson";
-    home = "/Users/jacobranson";
-  };
+  # Create /etc/zshrc that loads the nix-darwin environment.
+  programs.zsh.enable = true;
+
+  # Used for backwards compatibility, please read the changelog before changing.
+  # $ darwin-rebuild changelog
+  system.stateVersion = 4;
 
   nix.settings.substituters = [
     "https://cache.nixos.org/"
@@ -25,6 +27,12 @@
   '';
 
   services.nix-daemon.enable = true;
+  nix.package = pkgs.nix;
+
+  users.users.jacobranson = {
+    name = "jacobranson";
+    home = "/Users/jacobranson";
+  };
 
   environment.systemPackages = with pkgs; [];
 
@@ -33,10 +41,8 @@
      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
    ];
 
-  # Keyboard
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToControl = true;
-
   security.pam.enableSudoTouchIdAuth = true;
 }
 
