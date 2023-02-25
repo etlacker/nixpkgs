@@ -55,6 +55,7 @@
     "orion"
     "bitwarden"
     "element"
+    "signal"
     "obsidian"
     "visual-studio-code"
     "utm"
@@ -62,6 +63,7 @@
     "keepingyouawake"
     "logi-options-plus"
     "notunes"
+    "scroll-reverser"
   ];
 
   system.defaults.finder.AppleShowAllExtensions = true;
