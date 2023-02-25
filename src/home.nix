@@ -90,9 +90,9 @@
     };
 
     sessionVariables = {
-      "SHELL" = "\$HOME/.nix-profile/bin/zsh";
-      "PAGER" = "\$HOME/.nix-profile/bin/moar";
-      "EDITOR" = "\$HOME/.nix-profile/bin/nvim";
+      "SHELL" = "/etc/profiles/per-user/jacobranson/bin/zsh";
+      "PAGER" = "/etc/profiles/per-user/jacobranson/bin/moar";
+      "EDITOR" = "/etc/profiles/per-user/jacobranson/bin/nvim";
     };
 
     shellAliases = {
@@ -187,6 +187,14 @@
 
   # Other packages
   home.packages = with pkgs; [
+    coreutils
+    findutils
+    gnugrep
+    gnused
+    gawk
+    man
+    which
+    perl
     comma
     fd
     silver-searcher
