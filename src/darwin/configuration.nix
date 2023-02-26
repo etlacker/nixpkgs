@@ -51,19 +51,26 @@
     "homebrew/cask-drivers"
   ];
   homebrew.casks = [
-    "kitty"
+    # Fix macOS annoyances
+    "rectangle"
+    "hiddenbar"
+    "keepingyouawake"
+    "mouse-fix"
+    "notunes"
+
+    # Native macOS essentials
     "orion"
+    "codeedit"
+    "iterm2"
+    "utm"
+
+    # Non-native essentials
     "bitwarden"
     "element"
     "signal"
     "obsidian"
     "visual-studio-code"
-    "utm"
-    "bartender"
-    "keepingyouawake"
     "logi-options-plus"
-    "notunes"
-    "scroll-reverser"
   ];
 
   system.defaults.finder.AppleShowAllExtensions = true;
