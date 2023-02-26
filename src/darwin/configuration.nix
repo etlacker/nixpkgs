@@ -61,8 +61,11 @@
     # Native macOS essentials
     "orion"
     "codeedit"
+    "rapidapi"
     "iterm2"
     "utm"
+    "iina"
+    "setapp"
 
     # Non-native essentials
     "bitwarden"
