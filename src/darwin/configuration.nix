@@ -74,6 +74,7 @@
     "obsidian"
     "visual-studio-code"
     "logi-options-plus"
+    "nextcloud"
   ];
 
   system.defaults.finder.AppleShowAllExtensions = true;
