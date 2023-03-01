@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "jacobranson";
-  home.homeDirectory = "/Users/jacobranson";
+  home.username = "ericlacker";
+  home.homeDirectory = "/Users/ericlacker";
 
 
   # This value determines the Home Manager release that your
@@ -23,50 +23,50 @@
   # https://github.com/nix-community/home-manager/issues/1341#issuecomment-1301040457
 
   # Terminal emulator
-  programs.kitty = {
-    enable = true;
+  # programs.kitty = {
+  #   enable = true;
 
-    settings = {
-      shell = "/etc/profiles/per-user/jacobranson/bin/zsh";
+  #   settings = {
+  #     shell = "/etc/profiles/per-user/ericlacker/bin/zsh";
 
-      confirm_os_window_close = 0;
-      placement_strategy = "center";
-      remember_window_size = "no";
-      initial_window_width = "120c";
-      initial_window_height = "40c";
-      #hide_window_decorations = "titlebar-only";
-      macos_titlebar_color = "background";
-      wayland_titlebar_color = "background";
-      macos_show_window_title_in = "none";
+  #     confirm_os_window_close = 0;
+  #     placement_strategy = "center";
+  #     remember_window_size = "no";
+  #     initial_window_width = "120c";
+  #     initial_window_height = "40c";
+  #     #hide_window_decorations = "titlebar-only";
+  #     macos_titlebar_color = "background";
+  #     wayland_titlebar_color = "background";
+  #     macos_show_window_title_in = "none";
 
-      tab_bar_style = "powerline";
+  #     tab_bar_style = "powerline";
 
-      font_family = "CaskaydiaCove Nerd Font Mono";
-      bold_font = "CaskaydiaCove Nerd Font Mono Bold";
-      itlaic_font = "CaskaydiaCove Nerd Font Mono Italic";
-      bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
-      font_size = "14.0";
-    };
+  #     font_family = "CaskaydiaCove Nerd Font Mono";
+  #     bold_font = "CaskaydiaCove Nerd Font Mono Bold";
+  #     itlaic_font = "CaskaydiaCove Nerd Font Mono Italic";
+  #     bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
+  #     font_size = "14.0";
+  #   };
 
-    theme = "One Dark";
-  };
+  #   theme = "One Dark";
+  # };
 
   # Terminal multiplexer
-  programs.tmux = {
-    enable = true;
+  # programs.tmux = {
+  #   enable = true;
 
-    shell = "/etc/profiles/per-user/jacobranson/bin/zsh";
+  #   shell = "/etc/profiles/per-user/ericlacker/bin/zsh";
 
-    plugins = with pkgs.tmuxPlugins; [
-      onedark-theme
-      resurrect
-    ];
+  #   plugins = with pkgs.tmuxPlugins; [
+  #     onedark-theme
+  #     resurrect
+  #   ];
 
-    extraConfig = ''
-      set -g mouse on
-      set-option -g set-clipboard on
-    '';
-  };
+  #   extraConfig = ''
+  #     set -g mouse on
+  #     set-option -g set-clipboard on
+  #   '';
+  # };
 
   # Terminal shell
   programs.zsh = {
@@ -90,18 +90,18 @@
     };
 
     sessionVariables = {
-      "SHELL" = "/etc/profiles/per-user/jacobranson/bin/zsh";
-      "PAGER" = "/etc/profiles/per-user/jacobranson/bin/moar";
-      "EDITOR" = "/etc/profiles/per-user/jacobranson/bin/nvim";
+      "SHELL" = "/etc/profiles/per-user/ericlacker/bin/zsh";
+      "PAGER" = "/etc/profiles/per-user/ericlacker/bin/moar";
+      "EDITOR" = "/etc/profiles/per-user/ericlacker/bin/nvim";
     };
 
     shellAliases = {
       switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
       darwin-help = "man 5 configuration.nix";
-      fonts = "kitty +list-fonts | less";
-      less = "moar";
-      cat = "bat";
-      gs = "git status";
+      # fonts = "kitty +list-fonts | less";
+      # less = "moar";
+      # cat = "bat";
+      # gs = "git status";
     };
 
     zplug = {
@@ -147,8 +147,8 @@
     enable = true;
     lfs.enable = true;
     delta.enable = true;
-    userName = "Jacob Ranson";
-    userEmail = "code@jacobranson.dev";
+    userName = "Eric Lacker";
+    userEmail = "eric@lacker.us";
     extraConfig = {
       init = {
         defaultBranch = "main";
@@ -163,17 +163,17 @@
   };
 
   # Alternative to `cat`
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "TwoDark";
-    };
-  };
+  # programs.bat = {
+  #   enable = true;
+  #   config = {
+  #     theme = "TwoDark";
+  #   };
+  # };
 
   # Alternative to `top`
-  programs.htop = {
-    enable = true;
-  };
+  # programs.htop = {
+  #   enable = true;
+  # };
 
   # Search nixpkgs locally
   programs.nix-index = {
@@ -190,19 +190,19 @@
   home.packages = with pkgs; [
     coreutils
     findutils
-    gnugrep
-    gnused
-    gawk
+    # gnugrep
+    # gnused
+    # gawk
     man
     which
-    perl
+    # perl
     comma
     fd
-    silver-searcher
+    # silver-searcher
     ripgrep
-    moar
+    # moar
     neofetch
-    fontconfig
+    # fontconfig
   ];
 }
 

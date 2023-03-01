@@ -1,5 +1,5 @@
 {
-  description = "Jacob's darwin system";
+  description = "lackbook-pro-config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-22.11-darwin";
@@ -10,7 +10,7 @@
   };
 
   outputs = { self, nixpkgs, darwin, home-manager }: {
-    darwinConfigurations."Jacobs-MacBook-Air" = darwin.lib.darwinSystem {
+    darwinConfigurations."lackbook-pro" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
         ./src/darwin/configuration.nix
@@ -18,7 +18,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.jacobranson = import ./src/home.nix;
+            users.ericlacker = import ./src/home.nix;
           };
         }
       ];

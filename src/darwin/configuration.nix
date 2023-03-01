@@ -32,9 +32,9 @@
   programs.nix-index.enable = true;
   programs.nix-index.package = pkgs.nix-index;
 
-  users.users.jacobranson = {
-    name = "jacobranson";
-    home = "/Users/jacobranson";
+  users.users.ericlacker = {
+    name = "ericlacker";
+    home = "/Users/ericlacker";
   };
 
   environment.systemPackages = with pkgs; [];
@@ -52,29 +52,30 @@
   ];
   homebrew.casks = [
     # Fix macOS annoyances
-    "rectangle"
-    "hiddenbar"
-    "keepingyouawake"
-    "mouse-fix"
-    "notunes"
+    # "rectangle"
+    # "hiddenbar"
+    # "keepingyouawake"
+    # "mouse-fix"
+    # "notunes"
 
     # Native macOS essentials
-    "orion"
+    # "orion"
     "codeedit"
-    "rapidapi"
-    "iterm2"
+    # "rapidapi"
+    # "iterm2"
     "utm"
-    "iina"
-    "setapp"
+    # "iina"
+    # "setapp"
 
     # Non-native essentials
     "bitwarden"
-    "element"
-    "signal"
+    # "element"
+    # "signal"
     "obsidian"
     "visual-studio-code"
-    "logi-options-plus"
-    "nextcloud"
+    # "logi-options-plus"
+    # "nextcloud"
+    "firefox"
   ];
 
   system.defaults.finder.AppleShowAllExtensions = true;
@@ -89,15 +90,15 @@
   system.defaults.trackpad.Dragging = true;
   system.defaults.trackpad.TrackpadRightClick = true;
 
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToControl = true;
+  # system.keyboard.enableKeyMapping = true;
+  # system.keyboard.remapCapsLockToControl = true;
   security.pam.enableSudoTouchIdAuth = true;
 
-  services.yabai.enable = true;
-  services.yabai.package = pkgs.yabai;
-  services.yabai.extraConfig = (builtins.readFile ./assets/yabai/yabairc);
+  # services.yabai.enable = true;
+  # services.yabai.package = pkgs.yabai;
+  # services.yabai.extraConfig = (builtins.readFile ./assets/yabai/yabairc);
 
-  services.skhd.enable = true;
-  services.skhd.package = pkgs.skhd;
-  services.skhd.skhdConfig = (builtins.readFile ./assets/skhd/skhdrc);
+  # services.skhd.enable = true;
+  # services.skhd.package = pkgs.skhd;
+  # services.skhd.skhdConfig = (builtins.readFile ./assets/skhd/skhdrc);
 }
