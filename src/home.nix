@@ -23,33 +23,33 @@
   # https://github.com/nix-community/home-manager/issues/1341#issuecomment-1301040457
 
   # Terminal emulator
-  # programs.kitty = {
-  #   enable = true;
+  programs.kitty = {
+    enable = true;
 
-  #   settings = {
-  #     shell = "/etc/profiles/per-user/ericlacker/bin/zsh";
+    settings = {
+      shell = "/etc/profiles/per-user/ericlacker/bin/zsh";
 
-  #     confirm_os_window_close = 0;
-  #     placement_strategy = "center";
-  #     remember_window_size = "no";
-  #     initial_window_width = "120c";
-  #     initial_window_height = "40c";
-  #     #hide_window_decorations = "titlebar-only";
-  #     macos_titlebar_color = "background";
-  #     wayland_titlebar_color = "background";
-  #     macos_show_window_title_in = "none";
+      confirm_os_window_close = 0;
+      placement_strategy = "center";
+      remember_window_size = "no";
+      initial_window_width = "120c";
+      initial_window_height = "40c";
+      #hide_window_decorations = "titlebar-only";
+      macos_titlebar_color = "background";
+      wayland_titlebar_color = "background";
+      macos_show_window_title_in = "none";
 
-  #     tab_bar_style = "powerline";
+      tab_bar_style = "powerline";
 
-  #     font_family = "CaskaydiaCove Nerd Font Mono";
-  #     bold_font = "CaskaydiaCove Nerd Font Mono Bold";
-  #     itlaic_font = "CaskaydiaCove Nerd Font Mono Italic";
-  #     bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
-  #     font_size = "14.0";
-  #   };
+      font_family = "CaskaydiaCove Nerd Font Mono";
+      bold_font = "CaskaydiaCove Nerd Font Mono Bold";
+      itlaic_font = "CaskaydiaCove Nerd Font Mono Italic";
+      bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
+      font_size = "12.0";
+    };
 
-  #   theme = "One Dark";
-  # };
+    theme = "One Dark";
+  };
 
   # Terminal multiplexer
   # programs.tmux = {
@@ -98,8 +98,8 @@
     shellAliases = {
       switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
       darwin-help = "man 5 configuration.nix";
-      # fonts = "kitty +list-fonts | less";
-      # less = "moar";
+      fonts = "kitty +list-fonts | less";
+      less = "moar";
       # cat = "bat";
       # gs = "git status";
     };
@@ -200,9 +200,9 @@
     fd
     # silver-searcher
     ripgrep
-    # moar
+    moar
     neofetch
-    # fontconfig
+    fontconfig
   ];
 }
 
