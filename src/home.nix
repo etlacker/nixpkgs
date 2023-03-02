@@ -96,7 +96,7 @@
     };
 
     shellAliases = {
-      switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
+      switch = "darwin-rebuild switch --flake ~/.config/nixpkgs/nixpkgs";
       darwin-help = "man 5 configuration.nix";
       fonts = "kitty +list-fonts | less";
       less = "moar";
