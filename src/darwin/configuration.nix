@@ -74,6 +74,7 @@
     "obsidian"
     "visual-studio-code"
     "citrix-workspace"
+    "zoom"
     # "logi-options-plus"
     # "nextcloud"
     "firefox"
