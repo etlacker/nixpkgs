@@ -88,6 +88,7 @@
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
 
+  # This does not change the behavior of scroll, but does set the 'Nautral Scroll' toggle to false. Possible bug.
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
   system.defaults.trackpad.Clicking = true;
   system.defaults.trackpad.Dragging = true;
