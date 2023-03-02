@@ -73,6 +73,7 @@
     # "signal"
     "obsidian"
     "visual-studio-code"
+    "citrix-workspace"
     # "logi-options-plus"
     # "nextcloud"
     "firefox"
