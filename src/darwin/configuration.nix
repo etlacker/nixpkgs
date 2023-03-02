@@ -87,8 +87,8 @@
   system.defaults.finder.ShowPathbar = true;
   system.defaults.finder.ShowStatusBar = true;
   system.defaults.finder._FXShowPosixPathInTitle = true;
-  system.defaults.trackpad.swipescrolldirection = false;
 
+  system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = true;
   system.defaults.trackpad.Clicking = true;
   system.defaults.trackpad.Dragging = true;
   system.defaults.trackpad.TrackpadRightClick = true;
