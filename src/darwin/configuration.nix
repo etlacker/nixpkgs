@@ -44,6 +44,10 @@
      (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
   ];
 
+  programs.direnv.enable = true;
+  programs.direnv.enableZshIntegration = true;
+  programs.direnv.nix-direnv.enable = true;
+
   homebrew.enable = true;
   homebrew.onActivation.autoUpdate = true;
   homebrew.onActivation.upgrade = true;
