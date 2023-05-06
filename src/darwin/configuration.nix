@@ -61,6 +61,7 @@
     # Native macOS essentials
     # "orion"
     "codeedit"
+    "raycast"
     # "rapidapi"
     # "iterm2"
     "utm"

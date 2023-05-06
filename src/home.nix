@@ -195,6 +195,7 @@
     # gawk
     man
     which
+    # raycast (transform from cask to module)
     # perl
     comma
     fd
